@@ -161,3 +161,7 @@ cython_debug/
 
 data/binary/bad/*.png
 data/binary/good/*.png
+docs/*.png
+docs/*.pptx
+docs/*.docx
+docs/*.zip
