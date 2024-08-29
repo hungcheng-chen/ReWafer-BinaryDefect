@@ -165,3 +165,4 @@ docs/*.png
 docs/*.pptx
 docs/*.docx
 docs/*.zip
+runs/*/*.pt
