@@ -43,7 +43,7 @@ class Trainer:
         )  # Validation accuracy
 
         self.logger = logger  # Logger instance
-        self.prof = logger.prof  # Profiler
+        # self.prof = logger.prof  # Profiler
 
         if opt.resume:
             self._load_snapshot(opt.snapshot_path)  # Load training snapshot
@@ -118,9 +118,9 @@ class Trainer:
     def run(self):
         """Run training and validation over epochs."""
         best_val_acc = 0.0
-        self.prof.start()
+        # self.prof.start()
         for epoch in range(self.epochs_run, self.max_epochs):
-            self.prof.step()
+            # self.prof.step()
             self.train_one_epoch(epoch)
             self.lr_scheduler.step()  # Update learning rate
             val_acc = self.validate(epoch)
@@ -132,4 +132,4 @@ class Trainer:
                     self.model.state_dict(), os.path.join(self.log_dir, "best_model.pt")
                 )
 
-        self.prof.stop()
+        # self.prof.stop()

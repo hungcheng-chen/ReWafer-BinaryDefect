@@ -34,13 +34,13 @@ class Logger(object):
         self.writer.add_hparams(args, {})  # Write parameters to TensorBoard
 
         # Initialize profiler to analyze bottlenecks
-        self.prof = profiler.profile(
-            # schedule=torch.profiler.schedule(wait=1, warmup=1, active=3, repeat=2),
-            on_trace_ready=profiler.tensorboard_trace_handler(self.writer.log_dir),
-            profile_memory=True,
-            record_shapes=True,
-            with_stack=True,
-        )
+        # self.prof = profiler.profile(
+        #     # schedule=torch.profiler.schedule(wait=1, warmup=1, active=3, repeat=2),
+        #     on_trace_ready=profiler.tensorboard_trace_handler(self.writer.log_dir),
+        #     profile_memory=True,
+        #     record_shapes=True,
+        #     with_stack=True,
+        # )
 
     def add_scalar(self, tag, value, step):
         """
