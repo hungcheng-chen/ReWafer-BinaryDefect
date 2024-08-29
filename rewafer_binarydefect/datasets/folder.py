@@ -128,6 +128,7 @@ class ImageFolder(Dataset):
             raise ValueError("The class_to_idx parameter cannot be None.")
 
         instances = []
+        valid_extensions = (".jpg", ".jpeg", ".png")
         for target_class in sorted(class_to_idx.keys()):
             class_index = class_to_idx[target_class]
             target_dir = os.path.join(directory, target_class)
@@ -135,8 +136,9 @@ class ImageFolder(Dataset):
                 continue
             for root, _, fnames in sorted(os.walk(target_dir, followlinks=True)):
                 for fname in sorted(fnames):
-                    path = os.path.join(root, fname)
-                    instances.append((path, class_index))
+                    if fname.lower().endswith(valid_extensions):
+                        path = os.path.join(root, fname)
+                        instances.append((path, class_index))
         return instances
 
     def __getitem__(self, index: int) -> Tuple[Any, Any]:
