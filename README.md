@@ -67,7 +67,7 @@ Due to confidentiality reasons, we cannot provide real wafer images. For this pr
     <td><img src="docs/images/4.jpg" alt="Image 5" width="150"></td>
     <td><img src="docs/images/5.jpg" alt="Image 6" width="150"></td>
 </tr>
-</table>                    |
+</table>
 
 ## License
 
