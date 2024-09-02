@@ -159,10 +159,12 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
-data/binary/bad/*.png
-data/binary/good/*.png
-docs/*.png
-docs/*.pptx
-docs/*.docx
-docs/*.zip
-runs/*/*.pt
+# Ignore all binary image files
+data/binary/**/*.png
+
+# Ignore all files in the docs directory except for .gitkeep
+docs/*
+!docs/.gitkeep
+
+# Ignore all model files
+runs/**/*.pt
