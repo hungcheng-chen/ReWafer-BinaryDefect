@@ -40,17 +40,7 @@ if __name__ == "__main__":
     """
     Test mode must be enabled, and model weight and image paths must be specified.
     """
-    opt = opts().parse(
-        [
-            "--test",
-            "--model_name",
-            "convnext_tiny.fb_in22k",
-            "--load_model_path",
-            "runs/.../best_model.pt",
-            "--image_path",
-            ".../xxx.png",
-        ]
-    )
+    opt = opts().parse()
     # Load image
     with open(opt.image_path, "rb") as f:
         image = Image.open(opt.image_path).convert("RGB")

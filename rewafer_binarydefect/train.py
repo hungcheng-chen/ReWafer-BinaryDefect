@@ -50,14 +50,6 @@ def main(opt: argparse.Namespace, logger: Logger):
 
 
 if __name__ == "__main__":
-    opt = opts().parse(
-        [
-            "--model_name",
-            "convnext_tiny.fb_in22k",
-            # "--resume",
-            # "--snapshot_path",
-            # "runs/.../best_model.pt",
-        ]
-    )
+    opt = opts().parse()
     logger = Logger(opt)
     main(opt, logger)
