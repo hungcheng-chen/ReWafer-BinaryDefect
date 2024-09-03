@@ -20,6 +20,10 @@ As semiconductor manufacturing demands increasingly precise defect detection, tr
   - The system has been successfully deployed with 92% accuracy, greatly reducing the need for manual intervention.
   - Future plans include expanding the system to detect defect patterns for broader application.
 
+## Update Announcement
+
+We would like to inform you about the release of a new project: [ReWafer-MultiDefect](https://github.com/hungcheng-chen/ReWafer-MultiDefect.git). This project is a continuation of the `ReWafer-BinaryDefect` development, now featuring multi-class defect detection. The new system is designed to classify various types of defects in regenerated wafers, providing an enhanced solution for defect detection.
+
 ## Quickstart
 
 To get started with `ReWafer-BinaryDefect`, follow these steps:
