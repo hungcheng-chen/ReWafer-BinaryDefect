@@ -2,8 +2,6 @@
 
 ## Introduction
 
-## Introduction
-
 `ReWafer-BinaryDefect` is an AI system designed for binary defect detection in regenerated wafers, and it has been successfully implemented in the production process of a publicly listed company. Utilizing deep learning technology, this system automatically determines if a wafer has defects with an accuracy of **92%**, significantly enhancing production efficiency and reducing labor costs.
 
 ## Background
