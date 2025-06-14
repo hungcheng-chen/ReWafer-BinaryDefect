@@ -153,7 +153,7 @@ class ImageFolder(Dataset):
         # open path as file to avoid ResourceWarning
         # (https://github.com/python-pillow/Pillow/issues/835)
         with open(path, "rb") as f:
-            sample = Image.open(path).convert("RGB")
+            sample = Image.open(f).convert("RGB")
 
         if self.transform is not None:
             sample = self.transform(sample)

@@ -43,6 +43,6 @@ if __name__ == "__main__":
     opt = opts().parse()
     # Load image
     with open(opt.image_path, "rb") as f:
-        image = Image.open(opt.image_path).convert("RGB")
+        image = Image.open(f).convert("RGB")
     probability = main(opt, image)  # Make prediction
     print("probability:", probability)
