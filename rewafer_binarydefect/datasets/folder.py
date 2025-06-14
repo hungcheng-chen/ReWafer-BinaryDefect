@@ -25,6 +25,7 @@ class ImageFolder(Dataset):
     Args:
         root (str or ``pathlib.Path``): Root directory path.
         is_train (bool): If True, creates a dataset from the training folder, otherwise from the test folder.
+        seed (int): Random seed used for the train/test split.
         transform (callable, optional): A function/transform that takes in a PIL image
             and returns a transformed version. E.g, ``transforms.RandomCrop``
     Attributes:
@@ -52,9 +53,12 @@ class ImageFolder(Dataset):
         self.class_to_idx = class_to_idx
         self.idx_to_class = idx_to_class
 
-        # TODO(hcchen): Add stratified sampling, default to 8:2 split
+        # Perform stratified sampling with an 80-20 train-test split
         train_samples, test_samples = train_test_split(
-            samples, test_size=0.2, random_state=seed, stratify=[s[1] for s in samples]
+            samples,
+            test_size=0.2,
+            random_state=seed,
+            stratify=[s[1] for s in samples],
         )
         samples = train_samples if is_train else test_samples
 

@@ -30,8 +30,8 @@ To get started with `ReWafer-BinaryDefect`, follow these steps:
 
 1. **Clone the Repository**:
     ```sh
-    git clone https://github.com/hungcheng-chen/PCB-RouteOpt.git
-    cd rewafer_binarydefect
+    git clone https://github.com/hungcheng-chen/ReWafer-BinaryDefect.git
+    cd ReWafer-BinaryDefect
     ```
 
 2. **Install Dependencies**:
@@ -41,17 +41,17 @@ To get started with `ReWafer-BinaryDefect`, follow these steps:
 
 3. **Training**: Begin training with the following command. You can adjust command-line parameters as needed:
     ```bash
-    python train.py --data_dir data/binary --model_name convnext_tiny.fb_in22k --batch_size 128 --epochs 30 --lr 1e-4
+    python train.py --data_dir data/binary --model_name convnext_tiny.fb_in22k --batch_size 128 --max_epochs 30 --lr 1e-4
     ```
 
 4. **Validation**: Evaluate model performance during or after training with this command:
     ```bash
-    python val.py --test --data_dir data/binary --model_name convnext_tiny.fb_in22k --load_model runs/.../best_model.pt
+    python val.py --test --data_dir data/binary --model_name convnext_tiny.fb_in22k --load_model_path runs/.../best_model.pt
     ```
 
 5. **Inference**: Use this command to detect defects in new wafer images:
     ```bash
-    python test.py --test --model_name convnext_tiny.fb_in22k --load_model runs/.../best_model.pt --image_path .../xxx.png
+    python test.py --test --model_name convnext_tiny.fb_in22k --load_model_path runs/.../best_model.pt --image_path .../xxx.png
     ```
 
 ## Example
